@@ -65,11 +65,13 @@ cp .env.sample .env
 Puis remplir les valeurs dans le fichier `.env`
 
 3. Ajouter le dataset
-Créer le dossier `data/` et y placer le dataset :
-\```bash
+
+Créer le dossier `data/`
+
+```bash
 mkdir data
-\```
-Télécharger le [dataset Kaggle](https://www.kaggle.com/datasets/prasad22/healthcare-dataset) et le placer dans `data/healthcare_dataset.csv`
+```
+Télécharger le [dataset Kaggle](https://www.kaggle.com/datasets/prasad22/healthcare-dataset) et le placer dans `data/`
 
 4. Lancer le projet
 ```bash
