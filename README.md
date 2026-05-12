@@ -55,7 +55,7 @@ p5_migration_mongoDB_Docker/
 1. Cloner le projet
 ```bash
 git clone https://github.com/florentslmn/P5_migration_mongoDB_Docker.git
-cd p5_migration_mongoDB_Docker
+cd P5_migration_mongoDB_Docker
 ```
 
 2. Configurer les variables d'environnement
@@ -65,6 +65,10 @@ cp .env.sample .env
 Puis remplir les valeurs dans le fichier `.env`
 
 3. Ajouter le dataset
+Créer le dossier `data/` et y placer le dataset :
+\```bash
+mkdir data
+\```
 Télécharger le [dataset Kaggle](https://www.kaggle.com/datasets/prasad22/healthcare-dataset) et le placer dans `data/healthcare_dataset.csv`
 
 4. Lancer le projet
