@@ -1,0 +1,32 @@
+services:
+  mongodb:
+    image: mongo
+    env_file:
+      - .env
+    ports:
+      - "27017:27017"
+    restart: always
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - my_network
+
+  python-app:
+    build: .
+    depends_on:
+      - mongodb
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+    command: >
+      sh -c "uv run python init_db.py && uv run pytest && uv run python migrate.py"
+    networks:
+      - my_network
+
+volumes:
+  mongodb_data:
+
+networks:
+  my_network:
